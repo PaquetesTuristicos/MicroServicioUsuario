@@ -9,7 +9,7 @@ namespace Turismo.Template.AccessData.Context
     public class DbContextGeneric : DbContext
     {
 
-        public DbSet<User> User { get; set; }
+        public DbSet<User> Users { get; set; }
         public DbContextGeneric(DbContextOptions<DbContextGeneric> options) : base(options)
         {
 

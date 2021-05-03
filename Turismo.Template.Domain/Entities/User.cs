@@ -11,6 +11,6 @@ namespace Turismo.Template.Domain.Entities
         public string Apellido { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
-        public Guid RollId {get;set;}
+        public string RollId {get;set;}
     }
 }

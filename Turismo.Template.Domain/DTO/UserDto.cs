@@ -10,6 +10,6 @@ namespace Turismo.Template.Domain.DTO
         public string Apellido { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
-        public Guid Roll { get; set; }
+        public string Roll { get; set; }
     }
 }

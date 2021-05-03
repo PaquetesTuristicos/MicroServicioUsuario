@@ -37,12 +37,12 @@ namespace Turismo.Template.AccessData.Migrations
                     b.Property<string>("Password")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid>("RollId")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<string>("RollId")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("UserId");
 
-                    b.ToTable("User");
+                    b.ToTable("Users");
                 });
 #pragma warning restore 612, 618
         }

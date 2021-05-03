@@ -18,6 +18,17 @@ namespace Turismo.Template.API.Controllers
         {
             _service = service;
         }
+        [HttpGet]
+        public User Get(UserDto user)
+        {
+
+            var entity = new User
+            {
+
+            };
+            return entity;
+        }
+
         [HttpPost]
         public User Post(UserDto user)
         {
