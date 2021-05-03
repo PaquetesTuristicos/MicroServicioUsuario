@@ -10,7 +10,7 @@ namespace Turismo.Template.API.Controllers
     [ApiController]
     public class UserControllers : ControllerBase
     {
-        public UserControllers (IUserControllers service)
+        public UserControllers (IUserService service)
         {
 
         }
