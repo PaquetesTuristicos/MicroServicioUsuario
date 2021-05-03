@@ -7,11 +7,11 @@ using Turismo.Template.Domain.DTO;
 namespace Turismo.Template.Application.Services
 {
 
-    internal interface IUserService
+    public interface IUserService
     {
-        UserService createUser(UserDto user);
+        User createUser(UserDto user);
     }
-    class UserService : IUserService
+    public class UserService : IUserService
     {
         private readonly IRepositoryGeneric _repository;
         public UserService(IRepositoryGeneric repository)
@@ -19,7 +19,7 @@ namespace Turismo.Template.Application.Services
             _repository = repository;
         }
 
-        public UserService createUser(UserDto user)
+        public User createUser(UserDto user)
         {
             throw new NotImplementedException();
         }
