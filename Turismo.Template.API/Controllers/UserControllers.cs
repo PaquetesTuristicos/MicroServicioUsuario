@@ -3,7 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Turismo.Template.Application.Services;
 using Turismo.Template.Domain.DTO;
+using Turismo.Template.Domain.Entities;
 
 namespace Turismo.Template.API.Controllers
 {
@@ -17,9 +19,9 @@ namespace Turismo.Template.API.Controllers
             _service = service;
         }
         [HttpPost]
-        public UserControllers Post(UserDto user)
+        public User Post(UserDto user)
         {
-            return _service.createUser(user);
+            return _service.CreateUser(user);
         }
 
     }

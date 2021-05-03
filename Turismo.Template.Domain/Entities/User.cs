@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Turismo.Template.Domain.Entities
 {
-    class User
+    public class User
     {
 
         public Guid UserId { get; set; }

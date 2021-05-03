@@ -1,15 +1,19 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Text;
+using Turismo.Template.Domain.Entities;
 
 namespace Turismo.Template.AccessData.Context
 {
-    class DbUserContext
+    class DbUserContext : DbContext
     {
-        public DbContextGeneric(DbContextOptions<DbContext> options) : base(options)
+        public DbUserContext(DbContextOptions<DbContext> options) : base(options)
         {
 
         }
+
+        public DbSet<User> User { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
