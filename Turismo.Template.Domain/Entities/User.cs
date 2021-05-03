@@ -6,7 +6,6 @@ namespace Turismo.Template.Domain.Entities
 {
     public class User
     {
-
         public Guid UserId { get; set; }
         public string Nombre { get; set; }
         public string Apellido { get; set; }

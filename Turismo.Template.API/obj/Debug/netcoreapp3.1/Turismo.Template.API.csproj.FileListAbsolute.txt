@@ -366,3 +366,5 @@ C:\Users\jconde\source\repos\MicroServicioUsuario\Turismo.Template.API\obj\Debug
 C:\Users\jconde\source\repos\MicroServicioUsuario\Turismo.Template.API\obj\Debug\netcoreapp3.1\staticwebassets\Turismo.Template.API.StaticWebAssets.Manifest.cache
 C:\Users\jconde\source\repos\MicroServicioUsuario\Turismo.Template.API\obj\Debug\netcoreapp3.1\staticwebassets\Turismo.Template.API.StaticWebAssets.xml
 C:\Users\jconde\source\repos\MicroServicioUsuario\Turismo.Template.API\obj\Debug\netcoreapp3.1\Turismo.Template.API.genruntimeconfig.cache
+C:\Users\jconde\source\repos\MicroServicioUsuario\Turismo.Template.API\bin\Debug\netcoreapp3.1\Turismo.Template.AccessData.dll
+C:\Users\jconde\source\repos\MicroServicioUsuario\Turismo.Template.API\bin\Debug\netcoreapp3.1\Turismo.Template.AccessData.pdb

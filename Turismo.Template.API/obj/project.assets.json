@@ -2778,6 +2778,22 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "Turismo.Template.AccessData/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "5.0.5",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.5",
+          "Turismo.Template.Application": "1.0.0",
+          "Turismo.Template.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Turismo.Template.AccessData.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Turismo.Template.AccessData.dll": {}
+        }
+      },
       "Turismo.Template.Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -8965,6 +8981,11 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "Turismo.Template.AccessData/1.0.0": {
+      "type": "project",
+      "path": "../Turismo.Template.AccessData/Turismo.Template.AccessData.csproj",
+      "msbuildProject": "../Turismo.Template.AccessData/Turismo.Template.AccessData.csproj"
+    },
     "Turismo.Template.Application/1.0.0": {
       "type": "project",
       "path": "../Turismo.Template.Application/Turismo.Template.Application.csproj",
@@ -8984,6 +9005,7 @@
       "Microsoft.EntityFrameworkCore.Sqlite >= 3.1.13",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.5",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.5",
+      "Turismo.Template.AccessData >= 1.0.0",
       "Turismo.Template.Application >= 1.0.0"
     ]
   },
@@ -9013,6 +9035,9 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
+            "C:\\Users\\jconde\\source\\repos\\MicroServicioUsuario\\Turismo.Template.AccessData\\Turismo.Template.AccessData.csproj": {
+              "projectPath": "C:\\Users\\jconde\\source\\repos\\MicroServicioUsuario\\Turismo.Template.AccessData\\Turismo.Template.AccessData.csproj"
+            },
             "C:\\Users\\jconde\\source\\repos\\MicroServicioUsuario\\Turismo.Template.Application\\Turismo.Template.Application.csproj": {
               "projectPath": "C:\\Users\\jconde\\source\\repos\\MicroServicioUsuario\\Turismo.Template.Application\\Turismo.Template.Application.csproj"
             }

@@ -20,6 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Turismo.Template.AccessData\Turismo.Template.AccessData.csproj" />
     <ProjectReference Include="..\Turismo.Template.Application\Turismo.Template.Application.csproj" />
   </ItemGroup>
 

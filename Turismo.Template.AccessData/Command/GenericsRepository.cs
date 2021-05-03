@@ -10,8 +10,8 @@ namespace Turismo.Template.AccessData.Command
 {
     public class GenericsRepository : IRepositoryGeneric
     {
-        private readonly DbUserContext _context;
-        public GenericsRepository(DbUserContext dbContext)
+        private readonly DbContextGeneric _context;
+        public GenericsRepository(DbContextGeneric dbContext)
         {
             _context = dbContext;
         }

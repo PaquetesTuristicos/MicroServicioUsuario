@@ -11,6 +11,11 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Turismo.Template.AccessData.Command;
+using Turismo.Template.AccessData.Context;
+using Turismo.Template.Application.Services;
+using Turismo.Template.Domain.Commands;
+
 
 namespace Turismo.Template.API
 {
@@ -28,7 +33,9 @@ namespace Turismo.Template.API
         {
             services.AddControllers();
             //var connectionString = Configuration.GetSection("ConnectionString").Value; //busca las configuraciones del sistema
-            //services.AddDbContext<DbContext>(options => options.UseSqlServer(connectionString));
+            services.AddDbContext<DbContextGeneric>(options => options.UseSqlServer(@"server=PC-JCONDE;database=MsUser;trusted_connection=True;"));
+            services.AddTransient<IRepositoryGeneric, GenericsRepository>();
+            services.AddTransient<IUserService, UserService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
