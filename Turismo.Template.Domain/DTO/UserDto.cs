@@ -6,5 +6,10 @@ namespace Turismo.Template.Domain.DTO
 {
     public class UserDto
     {
+        public string Nombre { get; set; }
+        public string Apellido { get; set; }
+        public string Email { get; set; }
+        public string Password { get; set; }
+        public Guid Roll { get; set; }
     }
 }

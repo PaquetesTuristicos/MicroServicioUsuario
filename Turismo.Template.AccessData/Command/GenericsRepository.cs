@@ -3,14 +3,15 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Turismo.Template.AccessData.Context;
 using Turismo.Template.Domain.Commands;
 
 namespace Turismo.Template.AccessData.Command
 {
     public class GenericsRepository : IRepositoryGeneric
     {
-        private readonly DbContext _context;
-        public GenericsRepository(DbContext dbContext)
+        private readonly DbUserContext _context;
+        public GenericsRepository(DbUserContext dbContext)
         {
             _context = dbContext;
         }

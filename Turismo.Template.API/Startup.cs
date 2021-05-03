@@ -27,8 +27,8 @@ namespace Turismo.Template.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            var connectionString = Configuration.GetSection("ConnectionString").Value; //busca las configuraciones del sistema
-            services.AddDbContext<DbContext>(options => options.UseSqlServer(connectionString));
+            //var connectionString = Configuration.GetSection("ConnectionString").Value; //busca las configuraciones del sistema
+            //services.AddDbContext<DbContext>(options => options.UseSqlServer(connectionString));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

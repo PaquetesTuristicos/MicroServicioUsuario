@@ -6,7 +6,7 @@ using Turismo.Template.Domain.Entities;
 
 namespace Turismo.Template.AccessData.Context
 {
-    class DbUserContext : DbContext
+    public class DbUserContext : DbContext
     {
         public DbUserContext(DbContextOptions<DbContext> options) : base(options)
         {
@@ -17,7 +17,7 @@ namespace Turismo.Template.AccessData.Context
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=NombreServidorBD; Database = Template ; Trusted_Connection = True; ");
+            optionsBuilder.UseSqlServer(@"server=PC-JCONDE;database=MsUser;trusted_connection=True;");
         }
     }
 }
