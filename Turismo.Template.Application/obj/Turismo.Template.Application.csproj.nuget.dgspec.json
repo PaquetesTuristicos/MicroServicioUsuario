@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ZDR\\source\\repos\\MicroServicioUsuario-main\\Turismo.Template.Application\\Turismo.Template.Application.csproj": {}
+    "C:\\Users\\jconde\\source\\repos\\MicroServicioUsuario\\Turismo.Template.Application\\Turismo.Template.Application.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ZDR\\source\\repos\\MicroServicioUsuario-main\\Turismo.Template.Application\\Turismo.Template.Application.csproj": {
+    "C:\\Users\\jconde\\source\\repos\\MicroServicioUsuario\\Turismo.Template.Application\\Turismo.Template.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ZDR\\source\\repos\\MicroServicioUsuario-main\\Turismo.Template.Application\\Turismo.Template.Application.csproj",
+        "projectUniqueName": "C:\\Users\\jconde\\source\\repos\\MicroServicioUsuario\\Turismo.Template.Application\\Turismo.Template.Application.csproj",
         "projectName": "Turismo.Template.Application",
-        "projectPath": "C:\\Users\\ZDR\\source\\repos\\MicroServicioUsuario-main\\Turismo.Template.Application\\Turismo.Template.Application.csproj",
-        "packagesPath": "C:\\Users\\ZDR\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ZDR\\source\\repos\\MicroServicioUsuario-main\\Turismo.Template.Application\\obj\\",
+        "projectPath": "C:\\Users\\jconde\\source\\repos\\MicroServicioUsuario\\Turismo.Template.Application\\Turismo.Template.Application.csproj",
+        "packagesPath": "C:\\Users\\jconde\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jconde\\source\\repos\\MicroServicioUsuario\\Turismo.Template.Application\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\ZDR\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\jconde\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -30,10 +26,9 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\ZDR\\source\\repos\\MicroServicioUsuario-main\\Turismo.Template.Domain\\Turismo.Template.Domain.csproj": {
-                "projectPath": "C:\\Users\\ZDR\\source\\repos\\MicroServicioUsuario-main\\Turismo.Template.Domain\\Turismo.Template.Domain.csproj"
+              "C:\\Users\\jconde\\source\\repos\\MicroServicioUsuario\\Turismo.Template.Domain\\Turismo.Template.Domain.csproj": {
+                "projectPath": "C:\\Users\\jconde\\source\\repos\\MicroServicioUsuario\\Turismo.Template.Domain\\Turismo.Template.Domain.csproj"
               }
             }
           }
@@ -46,7 +41,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -94,29 +88,28 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.408\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\ZDR\\source\\repos\\MicroServicioUsuario-main\\Turismo.Template.Domain\\Turismo.Template.Domain.csproj": {
+    "C:\\Users\\jconde\\source\\repos\\MicroServicioUsuario\\Turismo.Template.Domain\\Turismo.Template.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ZDR\\source\\repos\\MicroServicioUsuario-main\\Turismo.Template.Domain\\Turismo.Template.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\jconde\\source\\repos\\MicroServicioUsuario\\Turismo.Template.Domain\\Turismo.Template.Domain.csproj",
         "projectName": "Turismo.Template.Domain",
-        "projectPath": "C:\\Users\\ZDR\\source\\repos\\MicroServicioUsuario-main\\Turismo.Template.Domain\\Turismo.Template.Domain.csproj",
-        "packagesPath": "C:\\Users\\ZDR\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ZDR\\source\\repos\\MicroServicioUsuario-main\\Turismo.Template.Domain\\obj\\",
+        "projectPath": "C:\\Users\\jconde\\source\\repos\\MicroServicioUsuario\\Turismo.Template.Domain\\Turismo.Template.Domain.csproj",
+        "packagesPath": "C:\\Users\\jconde\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jconde\\source\\repos\\MicroServicioUsuario\\Turismo.Template.Domain\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\ZDR\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\jconde\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -128,7 +121,6 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -140,7 +132,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -188,11 +179,14 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.408\\RuntimeIdentifierGraph.json"
         }
       }
     }

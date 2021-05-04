@@ -536,3 +536,9 @@ C:\Users\ZDR\source\repos\MicroServicioUsuario-main\Turismo.Template.API\obj\Deb
 C:\Users\ZDR\source\repos\MicroServicioUsuario-main\Turismo.Template.API\obj\Debug\netcoreapp3.1\Turismo.Template.API.pdb
 C:\Users\ZDR\source\repos\MicroServicioUsuario-main\Turismo.Template.API\obj\Debug\netcoreapp3.1\Turismo.Template.API.genruntimeconfig.cache
 C:\Users\ZDR\source\repos\MicroServicioUsuario-main\Turismo.Template.API\obj\Debug\netcoreapp3.1\Turismo.Template.API.sourcelink.json
+C:\Users\jconde\source\repos\MicroServicioUsuario\Turismo.Template.API\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\Users\jconde\source\repos\MicroServicioUsuario\Turismo.Template.API\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\jconde\source\repos\MicroServicioUsuario\Turismo.Template.API\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\jconde\source\repos\MicroServicioUsuario\Turismo.Template.API\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\jconde\source\repos\MicroServicioUsuario\Turismo.Template.API\obj\Debug\netcoreapp3.1\Turismo.Template.API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\jconde\source\repos\MicroServicioUsuario\Turismo.Template.API\obj\Debug\netcoreapp3.1\Turismo.Template.API.sourcelink.json

@@ -43,3 +43,4 @@ C:\Users\ZDR\source\repos\MicroServicioUsuario-main\Turismo.Template.Domain\obj\
 C:\Users\ZDR\source\repos\MicroServicioUsuario-main\Turismo.Template.Domain\obj\Debug\netcoreapp3.1\Turismo.Template.Domain.pdb
 C:\Users\ZDR\source\repos\MicroServicioUsuario-main\Turismo.Template.Domain\obj\Debug\netcoreapp3.1\Turismo.Template.Domain.genruntimeconfig.cache
 C:\Users\ZDR\source\repos\MicroServicioUsuario-main\Turismo.Template.Domain\obj\Debug\netcoreapp3.1\Turismo.Template.Domain.sourcelink.json
+C:\Users\jconde\source\repos\MicroServicioUsuario\Turismo.Template.Domain\obj\Debug\netcoreapp3.1\Turismo.Template.Domain.sourcelink.json
