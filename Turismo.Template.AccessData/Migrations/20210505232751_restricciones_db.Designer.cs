@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Turismo.Template.AccessData.Context;
 
 namespace Turismo.Template.AccessData.Migrations
 {
     [DbContext(typeof(DbContextGeneric))]
-    partial class DbContextGenericModelSnapshot : ModelSnapshot
+    [Migration("20210505232751_restricciones_db")]
+    partial class restricciones_db
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
