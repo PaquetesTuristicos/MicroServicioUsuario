@@ -19,12 +19,14 @@ namespace Turismo.Template.API.Controllers
             _service = service;
         }
 
-        //visualiza usuarios
+        // GET: Usuarios
         [HttpGet]
         public IEnumerable<User> Get()
         {
             return _service.getUser();
         }
+        // POST: Cargar usuario
+        // nombre, apelido, email, password
         [HttpPost]
         public User Post(UserDto user)
         {

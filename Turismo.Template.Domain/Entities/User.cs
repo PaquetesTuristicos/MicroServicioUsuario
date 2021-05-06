@@ -8,7 +8,7 @@ namespace Turismo.Template.Domain.Entities
     public class User
     {
         [Required]
-        public Guid UserId { get; set; }
+        public int UserId { get; set; }
         [Required]
         [StringLength(100)]
         public string Nombre { get; set; }

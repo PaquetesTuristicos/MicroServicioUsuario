@@ -28,7 +28,6 @@ namespace Turismo.Template.Application.Services
         {
             var entity = new User
             {
-                UserId = Guid.NewGuid(),
                 Nombre = user.Nombre,
                 Apellido = user.Apellido,
                 Email = user.Email,
