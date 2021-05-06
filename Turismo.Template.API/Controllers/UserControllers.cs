@@ -9,7 +9,7 @@ using Turismo.Template.Domain.Entities;
 
 namespace Turismo.Template.API.Controllers
 {
-    [Route("api/controller")]
+    [Route("api/User")]
     [ApiController]
     public class UserControllers : ControllerBase
     {
