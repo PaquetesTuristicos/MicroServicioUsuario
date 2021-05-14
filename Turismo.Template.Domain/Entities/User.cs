@@ -21,6 +21,8 @@ namespace Turismo.Template.Domain.Entities
         [Required]
         public string Password { get; set; }
         [Required]
-        public string RollId {get;set;}
+        public int RollId {get;set;}
+        public Roll Roll { get; set; }
+
     }
 }

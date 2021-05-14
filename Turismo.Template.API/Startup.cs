@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -37,6 +39,7 @@ namespace Turismo.Template.API
             services.AddDbContext<DbContextGeneric>(options => options.UseSqlServer(@"server=localhost;database=MsUser;trusted_connection=True;"));
             services.AddTransient<IRepositoryGeneric, GenericsRepository>();
             services.AddTransient<IUserService, UserService>();
+            //Se agrega en generador de Swagger
             AddSwagger(services);
         }
 
@@ -54,11 +57,12 @@ namespace Turismo.Template.API
                     Description = "Prototype API",
                     Contact = new OpenApiContact
                     {
-                        Name = "Prototype Company",
+                        Name = "Projecto Software",
                         Email = string.Empty,
-                        Url = new Uri("https://protcomp.com/"),
+                        Url = new Uri("https://algo.com/"),
                     }
                 });
+
             });
             services.AddSwaggerGen(c =>
             {
@@ -85,6 +89,7 @@ namespace Turismo.Template.API
                 endpoints.MapControllers();
             });
             app.UseSwagger();
+            //indica la ruta para generar la configuración de swagger
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/test/swagger.json", "Prototype API V1");

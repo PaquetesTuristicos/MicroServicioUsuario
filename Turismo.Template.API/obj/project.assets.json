@@ -2902,7 +2902,10 @@
         },
         "runtime": {
           "bin/placeholder/Turismo.Template.AccessData.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       },
       "Turismo.Template.Application/1.0.0": {
         "type": "project",
@@ -2919,7 +2922,10 @@
         },
         "runtime": {
           "bin/placeholder/Turismo.Template.Application.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       },
       "Turismo.Template.Domain/1.0.0": {
         "type": "project",
@@ -2935,7 +2941,10 @@
         },
         "runtime": {
           "bin/placeholder/Turismo.Template.Domain.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },
@@ -9484,7 +9493,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.408\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.409\\RuntimeIdentifierGraph.json"
       }
     }
   }
