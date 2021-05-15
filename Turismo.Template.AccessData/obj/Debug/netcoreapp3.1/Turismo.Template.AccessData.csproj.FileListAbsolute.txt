@@ -39,3 +39,5 @@ C:\Users\ZDR\source\repos\MicroServicioUsuario-main\Turismo.Template.AccessData\
 C:\Users\ZDR\source\repos\MicroServicioUsuario-main\Turismo.Template.AccessData\obj\Debug\netcoreapp3.1\Turismo.Template.AccessData.genruntimeconfig.cache
 C:\Users\ZDR\source\repos\MicroServicioUsuario-main\Turismo.Template.AccessData\obj\Debug\netcoreapp3.1\Turismo.Template.AccessData.sourcelink.json
 C:\Users\jconde\source\repos\MicroServicioUsuario\Turismo.Template.AccessData\obj\Debug\netcoreapp3.1\Turismo.Template.AccessData.sourcelink.json
+C:\Users\pc\Source\Repos\MicroServicioUsuario\Turismo.Template.AccessData\obj\Debug\netcoreapp3.1\Turismo.Template.AccessData.dll
+C:\Users\pc\Source\Repos\MicroServicioUsuario\Turismo.Template.AccessData\obj\Debug\netcoreapp3.1\Turismo.Template.AccessData.pdb
