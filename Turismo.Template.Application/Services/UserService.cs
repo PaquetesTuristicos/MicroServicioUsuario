@@ -4,7 +4,7 @@ using System.Text;
 using Turismo.Template.Domain.Commands;
 using Turismo.Template.Domain.DTO;
 using Turismo.Template.Domain.Entities;
-
+using Turismo.Template.Domain.Queries;
 
 namespace Turismo.Template.Application.Services
 {
@@ -19,9 +19,11 @@ namespace Turismo.Template.Application.Services
     public class UserService : IUserService
     {
         private readonly IRepositoryGeneric _repository;
-        public UserService(IRepositoryGeneric repository)
+        private readonly IUserQuery _query;
+        public UserService(IRepositoryGeneric repository, IUserQuery query)
         {
             _repository = repository;
+            _query = query;
         }
 
         public User CreateUser(UserDto user)

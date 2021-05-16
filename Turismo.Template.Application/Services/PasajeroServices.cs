@@ -4,6 +4,7 @@ using System.Text;
 using Turismo.Template.Domain.Commands;
 using Turismo.Template.Domain.DTO;
 using Turismo.Template.Domain.Entities;
+using Turismo.Template.Domain.Queries;
 
 namespace Turismo.Template.Application.Services
 {
@@ -17,9 +18,11 @@ namespace Turismo.Template.Application.Services
     public class PasajeroServices : IPasajeroServices
     {
         private readonly IRepositoryGeneric _repository;
-        public PasajeroServices(IRepositoryGeneric repository)
+        private readonly IPasajeroQuery _query;
+        public PasajeroServices(IRepositoryGeneric repository, IPasajeroQuery query)
         {
             _repository = repository;
+            _query = query;
         }
         public Pasajero Create(PasajeroDto pasajero)
         {
