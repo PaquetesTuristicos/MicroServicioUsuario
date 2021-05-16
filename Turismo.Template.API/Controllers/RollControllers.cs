@@ -26,19 +26,6 @@ namespace Turismo.Template.API.Controllers
             return _service.getAll();
 
         }
-        // POST: Cargar Roll
-        [HttpPost]
-        public IActionResult Post(RollDto roll)
-        {
-            try
-            {
-                return new JsonResult(_service.Create(roll)) { StatusCode = 201 };
-            }
-            catch (Exception e)
-            {
-                return BadRequest(e.Message);
-            }
-        }
 
         [HttpGet("{id}")]
         public IActionResult GetId(int id)
@@ -53,10 +40,5 @@ namespace Turismo.Template.API.Controllers
             }
         }
 
-        [HttpDelete("{id}")]
-        public void DeleteId(int id)
-        {
-            _service.deleteId(id);
-        }
     }
 }

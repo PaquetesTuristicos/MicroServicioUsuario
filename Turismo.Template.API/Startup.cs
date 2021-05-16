@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -14,6 +16,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using SqlKata.Compilers;
 using Turismo.Template.AccessData.Command;
 using Turismo.Template.AccessData.Context;
 using Turismo.Template.Application.Services;
@@ -36,11 +39,26 @@ namespace Turismo.Template.API
         {
             services.AddControllers();
             //var connectionString = Configuration.GetSection("ConnectionString").Value; //busca las configuraciones del sistema
-            services.AddDbContext<DbContextGeneric>(options => options.UseSqlServer(@"server=localhost;database=MsUser;trusted_connection=True;"));
+            //Guardo conexion en variable
+            var conexion = @"server=localhost;database=MsUser;trusted_connection=True;";
+
+            services.AddDbContext<DbContextGeneric>(options => options.UseSqlServer(conexion));
             services.AddTransient<IRepositoryGeneric, GenericsRepository>();
             services.AddTransient<IUserService, UserService>();
+            services.AddTransient<IRollServices, RollServices>();
+            services.AddTransient<IPasajeroServices, PasajeroServices>();
+            services.AddTransient<IEmpleadoServices, EmpleadoServices>();
+            services.AddTransient<IMetodoPagoServices, MetodoPagoServices>();
+
             //Se agrega en generador de Swagger
             AddSwagger(services);
+
+            //SQLKATA
+            services.AddTransient<Compiler, SqlServerCompiler>();
+            services.AddTransient<IDbConnection>(c =>
+            {
+                return new SqlConnection(conexion);
+            });
         }
 
         private void AddSwagger(IServiceCollection services)

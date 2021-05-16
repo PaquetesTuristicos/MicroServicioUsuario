@@ -6,7 +6,6 @@ C:\Users\uriel\source\repos\MicroTemplate\Turismo.Template.API\Turismo.Template.
 C:\Users\jconde\source\repos\MicroServicioUsuario\Turismo.Template.AccessData\obj\Debug\netcoreapp3.1\Turismo.Template.AccessData.csprojAssemblyReference.cache
 C:\Users\jconde\source\repos\MicroServicioUsuario\Turismo.Template.AccessData\obj\Debug\netcoreapp3.1\Turismo.Template.AccessData.AssemblyInfoInputs.cache
 C:\Users\jconde\source\repos\MicroServicioUsuario\Turismo.Template.AccessData\obj\Debug\netcoreapp3.1\Turismo.Template.AccessData.AssemblyInfo.cs
-C:\Users\jconde\source\repos\MicroServicioUsuario\Turismo.Template.AccessData\obj\Debug\netcoreapp3.1\Turismo.Template.AccessData.csproj.CoreCompileInputs.cache
 C:\Users\jconde\source\repos\MicroServicioUsuario\Turismo.Template.AccessData\bin\Debug\netcoreapp3.1\Turismo.Template.AccessData.deps.json
 C:\Users\jconde\source\repos\MicroServicioUsuario\Turismo.Template.AccessData\bin\Debug\netcoreapp3.1\Turismo.Template.AccessData.runtimeconfig.json
 C:\Users\jconde\source\repos\MicroServicioUsuario\Turismo.Template.AccessData\bin\Debug\netcoreapp3.1\Turismo.Template.AccessData.runtimeconfig.dev.json
@@ -38,6 +37,7 @@ C:\Users\ZDR\source\repos\MicroServicioUsuario-main\Turismo.Template.AccessData\
 C:\Users\ZDR\source\repos\MicroServicioUsuario-main\Turismo.Template.AccessData\obj\Debug\netcoreapp3.1\Turismo.Template.AccessData.pdb
 C:\Users\ZDR\source\repos\MicroServicioUsuario-main\Turismo.Template.AccessData\obj\Debug\netcoreapp3.1\Turismo.Template.AccessData.genruntimeconfig.cache
 C:\Users\ZDR\source\repos\MicroServicioUsuario-main\Turismo.Template.AccessData\obj\Debug\netcoreapp3.1\Turismo.Template.AccessData.sourcelink.json
-C:\Users\jconde\source\repos\MicroServicioUsuario\Turismo.Template.AccessData\obj\Debug\netcoreapp3.1\Turismo.Template.AccessData.sourcelink.json
 C:\Users\pc\Source\Repos\MicroServicioUsuario\Turismo.Template.AccessData\obj\Debug\netcoreapp3.1\Turismo.Template.AccessData.dll
 C:\Users\pc\Source\Repos\MicroServicioUsuario\Turismo.Template.AccessData\obj\Debug\netcoreapp3.1\Turismo.Template.AccessData.pdb
+C:\Users\jconde\source\repos\MicroServicioUsuario\Turismo.Template.AccessData\obj\Debug\netcoreapp3.1\Turismo.Template.AccessData.csproj.CoreCompileInputs.cache
+C:\Users\jconde\source\repos\MicroServicioUsuario\Turismo.Template.AccessData\obj\Debug\netcoreapp3.1\Turismo.Template.AccessData.sourcelink.json
