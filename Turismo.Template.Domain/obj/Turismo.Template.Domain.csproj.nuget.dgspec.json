@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jconde\\source\\repos\\MicroServicioUsuario\\Turismo.Template.Domain\\Turismo.Template.Domain.csproj": {}
+    "C:\\Users\\pc\\source\\repos\\MicroServicioUsuario\\Turismo.Template.Domain\\Turismo.Template.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jconde\\source\\repos\\MicroServicioUsuario\\Turismo.Template.Domain\\Turismo.Template.Domain.csproj": {
+    "C:\\Users\\pc\\source\\repos\\MicroServicioUsuario\\Turismo.Template.Domain\\Turismo.Template.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jconde\\source\\repos\\MicroServicioUsuario\\Turismo.Template.Domain\\Turismo.Template.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\pc\\source\\repos\\MicroServicioUsuario\\Turismo.Template.Domain\\Turismo.Template.Domain.csproj",
         "projectName": "Turismo.Template.Domain",
-        "projectPath": "C:\\Users\\jconde\\source\\repos\\MicroServicioUsuario\\Turismo.Template.Domain\\Turismo.Template.Domain.csproj",
-        "packagesPath": "C:\\Users\\jconde\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jconde\\source\\repos\\MicroServicioUsuario\\Turismo.Template.Domain\\obj\\",
+        "projectPath": "C:\\Users\\pc\\source\\repos\\MicroServicioUsuario\\Turismo.Template.Domain\\Turismo.Template.Domain.csproj",
+        "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\pc\\source\\repos\\MicroServicioUsuario\\Turismo.Template.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\jconde\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,6 +26,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -37,6 +38,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -84,14 +86,11 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.409\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

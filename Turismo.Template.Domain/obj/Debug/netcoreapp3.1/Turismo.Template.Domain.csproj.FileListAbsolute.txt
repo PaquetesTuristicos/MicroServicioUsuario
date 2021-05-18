@@ -46,3 +46,14 @@ C:\Users\ZDR\source\repos\MicroServicioUsuario-main\Turismo.Template.Domain\obj\
 C:\Users\jconde\source\repos\MicroServicioUsuario\Turismo.Template.Domain\obj\Debug\netcoreapp3.1\Turismo.Template.Domain.sourcelink.json
 C:\Users\pc\Source\Repos\MicroServicioUsuario\Turismo.Template.Domain\obj\Debug\netcoreapp3.1\Turismo.Template.Domain.dll
 C:\Users\pc\Source\Repos\MicroServicioUsuario\Turismo.Template.Domain\obj\Debug\netcoreapp3.1\Turismo.Template.Domain.pdb
+C:\Users\pc\Source\Repos\MicroServicioUsuario\Turismo.Template.Domain\bin\Debug\netcoreapp3.1\Turismo.Template.Domain.deps.json
+C:\Users\pc\Source\Repos\MicroServicioUsuario\Turismo.Template.Domain\bin\Debug\netcoreapp3.1\Turismo.Template.Domain.runtimeconfig.json
+C:\Users\pc\Source\Repos\MicroServicioUsuario\Turismo.Template.Domain\bin\Debug\netcoreapp3.1\Turismo.Template.Domain.runtimeconfig.dev.json
+C:\Users\pc\Source\Repos\MicroServicioUsuario\Turismo.Template.Domain\bin\Debug\netcoreapp3.1\Turismo.Template.Domain.dll
+C:\Users\pc\Source\Repos\MicroServicioUsuario\Turismo.Template.Domain\bin\Debug\netcoreapp3.1\Turismo.Template.Domain.pdb
+C:\Users\pc\Source\Repos\MicroServicioUsuario\Turismo.Template.Domain\obj\Debug\netcoreapp3.1\Turismo.Template.Domain.csprojAssemblyReference.cache
+C:\Users\pc\Source\Repos\MicroServicioUsuario\Turismo.Template.Domain\obj\Debug\netcoreapp3.1\Turismo.Template.Domain.AssemblyInfoInputs.cache
+C:\Users\pc\Source\Repos\MicroServicioUsuario\Turismo.Template.Domain\obj\Debug\netcoreapp3.1\Turismo.Template.Domain.AssemblyInfo.cs
+C:\Users\pc\Source\Repos\MicroServicioUsuario\Turismo.Template.Domain\obj\Debug\netcoreapp3.1\Turismo.Template.Domain.csproj.CoreCompileInputs.cache
+C:\Users\pc\Source\Repos\MicroServicioUsuario\Turismo.Template.Domain\obj\Debug\netcoreapp3.1\Turismo.Template.Domain.sourcelink.json
+C:\Users\pc\Source\Repos\MicroServicioUsuario\Turismo.Template.Domain\obj\Debug\netcoreapp3.1\Turismo.Template.Domain.genruntimeconfig.cache

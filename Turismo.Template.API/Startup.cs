@@ -19,9 +19,10 @@ using Microsoft.OpenApi.Models;
 using SqlKata.Compilers;
 using Turismo.Template.AccessData.Command;
 using Turismo.Template.AccessData.Context;
+using Turismo.Template.AccessData.Queries;
 using Turismo.Template.Application.Services;
 using Turismo.Template.Domain.Commands;
-
+using Turismo.Template.Domain.Queries;
 
 namespace Turismo.Template.API
 {
@@ -49,6 +50,9 @@ namespace Turismo.Template.API
             services.AddTransient<IPasajeroServices, PasajeroServices>();
             services.AddTransient<IEmpleadoServices, EmpleadoServices>();
             services.AddTransient<IMetodoPagoServices, MetodoPagoServices>();
+            services.AddTransient<IUserQuery, UserQuery>();
+            services.AddTransient<IPasajeroQuery, PasajeroQuery>();
+            services.AddTransient<IEmpleadoQuery, EmpleadoQuery>();
 
             //Se agrega en generador de Swagger
             AddSwagger(services);

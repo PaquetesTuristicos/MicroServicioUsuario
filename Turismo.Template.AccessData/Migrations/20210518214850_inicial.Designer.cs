@@ -10,8 +10,8 @@ using Turismo.Template.AccessData.Context;
 namespace Turismo.Template.AccessData.Migrations
 {
     [DbContext(typeof(DbContextGeneric))]
-    [Migration("20210514212609_init")]
-    partial class init
+    [Migration("20210518214850_inicial")]
+    partial class inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
