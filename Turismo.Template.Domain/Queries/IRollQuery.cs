@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Turismo.Template.Domain.DTO;
 
 namespace Turismo.Template.Domain.Queries
 {
-    public interface IUserQuery
+    public interface IRollQuery
     {
-        List<UserByEmailDto> GetUserByEmail(string email);
     }
 }

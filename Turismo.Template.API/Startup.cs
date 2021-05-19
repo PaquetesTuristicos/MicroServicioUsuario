@@ -53,6 +53,7 @@ namespace Turismo.Template.API
             services.AddTransient<IUserQuery, UserQuery>();
             services.AddTransient<IPasajeroQuery, PasajeroQuery>();
             services.AddTransient<IEmpleadoQuery, EmpleadoQuery>();
+            services.AddTransient<IRollQuery, RollQuery>();
 
             //Se agrega en generador de Swagger
             AddSwagger(services);

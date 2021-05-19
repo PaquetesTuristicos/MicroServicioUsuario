@@ -4,6 +4,7 @@ using System.Text;
 using Turismo.Template.Domain.Commands;
 using Turismo.Template.Domain.DTO;
 using Turismo.Template.Domain.Entities;
+using Turismo.Template.Domain.Queries;
 
 namespace Turismo.Template.Application.Services
 {
@@ -15,9 +16,11 @@ namespace Turismo.Template.Application.Services
     public class RollServices : IRollServices
     {
         private readonly IRepositoryGeneric _repository;
-        public RollServices(IRepositoryGeneric repository)
+        private readonly IUserQuery _query;
+        public RollServices(IRepositoryGeneric repository, IUserQuery query)
         {
             _repository = repository;
+            _query = query;
         }
 
         public IEnumerable<Roll> getAll()

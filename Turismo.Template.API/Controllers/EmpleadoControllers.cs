@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,9 +23,17 @@ namespace Turismo.Template.API.Controllers
 
         // GET: Empleados
         [HttpGet]
-        public IEnumerable<Empleado> Get()
+        [ProducesResponseType(typeof(List<UserByEmailDto>), StatusCodes.Status200OK)]
+        public IActionResult Get([FromQuery] string email)
         {
-            return _service.getAll();
+            try
+            {
+                return new JsonResult(_service.GetEmpleadoByEmail(email)) { StatusCode = 200 };
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
 
         }
         // POST: Cargar Empleado

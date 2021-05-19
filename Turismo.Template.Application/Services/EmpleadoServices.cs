@@ -4,6 +4,7 @@ using System.Text;
 using Turismo.Template.Domain.Commands;
 using Turismo.Template.Domain.DTO;
 using Turismo.Template.Domain.Entities;
+using Turismo.Template.Domain.Queries;
 
 namespace Turismo.Template.Application.Services
 {
@@ -13,13 +14,16 @@ namespace Turismo.Template.Application.Services
         IEnumerable<Empleado> getAll();
         Empleado getId(int id);
         void deleteId(int id);
+        List<EmpleadoByEmailDto> GetEmpleadoByEmail(string email);
     }
     public class EmpleadoServices : IEmpleadoServices
     {
         private readonly IRepositoryGeneric _repository;
-        public EmpleadoServices(IRepositoryGeneric repository)
+        private readonly IEmpleadoQuery _query;
+        public EmpleadoServices(IRepositoryGeneric repository, IEmpleadoQuery query)
         {
             _repository = repository;
+            _query = query;
         }
         public Empleado Create(EmpleadoDto empleado)
         {
@@ -50,6 +54,11 @@ namespace Turismo.Template.Application.Services
         public Empleado getId(int id)
         {
             return _repository.FindBy<Empleado>(id);
+        }
+
+        public List<EmpleadoByEmailDto> GetEmpleadoByEmail(string email)
+        {
+            return _query.GetEmpleadoByEmail(email);
         }
     }
 }

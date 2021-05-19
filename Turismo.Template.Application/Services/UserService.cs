@@ -15,6 +15,7 @@ namespace Turismo.Template.Application.Services
         IEnumerable<User> getUser();
         User getUserId(int id);
         void deleteUserId(int id);
+        List<UserByEmailDto> GetUserByEmail(string email);
     }
     public class UserService : IUserService
     {
@@ -52,6 +53,11 @@ namespace Turismo.Template.Application.Services
         public void deleteUserId(int id)
         {
             _repository.DeleteBy<User>(id);
+        }
+
+        public List<UserByEmailDto> GetUserByEmail(string email)
+        {
+            return _query.GetUserByEmail(email);
         }
     }
 

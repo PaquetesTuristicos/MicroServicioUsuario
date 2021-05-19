@@ -3000,7 +3000,10 @@
         },
         "runtime": {
           "bin/placeholder/Turismo.Template.AccessData.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       },
       "Turismo.Template.Application/1.0.0": {
         "type": "project",
@@ -3017,7 +3020,10 @@
         },
         "runtime": {
           "bin/placeholder/Turismo.Template.Application.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       },
       "Turismo.Template.Domain/1.0.0": {
         "type": "project",
@@ -9660,19 +9666,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\pc\\.nuget\\packages\\": {}
+    "C:\\Users\\jconde\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pc\\source\\repos\\MicroServicioUsuario\\Turismo.Template.API\\Turismo.Template.API.csproj",
+      "projectUniqueName": "C:\\Users\\jconde\\source\\repos\\MicroServicioUsuario\\Turismo.Template.API\\Turismo.Template.API.csproj",
       "projectName": "Turismo.Template.API",
-      "projectPath": "C:\\Users\\pc\\source\\repos\\MicroServicioUsuario\\Turismo.Template.API\\Turismo.Template.API.csproj",
-      "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pc\\source\\repos\\MicroServicioUsuario\\Turismo.Template.API\\obj\\",
+      "projectPath": "C:\\Users\\jconde\\source\\repos\\MicroServicioUsuario\\Turismo.Template.API\\Turismo.Template.API.csproj",
+      "packagesPath": "C:\\Users\\jconde\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jconde\\source\\repos\\MicroServicioUsuario\\Turismo.Template.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\jconde\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -9684,13 +9690,12 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\pc\\source\\repos\\MicroServicioUsuario\\Turismo.Template.AccessData\\Turismo.Template.AccessData.csproj": {
-              "projectPath": "C:\\Users\\pc\\source\\repos\\MicroServicioUsuario\\Turismo.Template.AccessData\\Turismo.Template.AccessData.csproj"
+            "C:\\Users\\jconde\\source\\repos\\MicroServicioUsuario\\Turismo.Template.AccessData\\Turismo.Template.AccessData.csproj": {
+              "projectPath": "C:\\Users\\jconde\\source\\repos\\MicroServicioUsuario\\Turismo.Template.AccessData\\Turismo.Template.AccessData.csproj"
             },
-            "C:\\Users\\pc\\source\\repos\\MicroServicioUsuario\\Turismo.Template.Application\\Turismo.Template.Application.csproj": {
-              "projectPath": "C:\\Users\\pc\\source\\repos\\MicroServicioUsuario\\Turismo.Template.Application\\Turismo.Template.Application.csproj"
+            "C:\\Users\\jconde\\source\\repos\\MicroServicioUsuario\\Turismo.Template.Application\\Turismo.Template.Application.csproj": {
+              "projectPath": "C:\\Users\\jconde\\source\\repos\\MicroServicioUsuario\\Turismo.Template.Application\\Turismo.Template.Application.csproj"
             }
           }
         }
@@ -9703,7 +9708,6 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
-        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
@@ -9766,7 +9770,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.409\\RuntimeIdentifierGraph.json"
       }
     }
   }

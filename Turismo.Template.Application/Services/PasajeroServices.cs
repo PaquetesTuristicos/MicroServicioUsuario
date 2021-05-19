@@ -14,6 +14,7 @@ namespace Turismo.Template.Application.Services
         IEnumerable<Pasajero> getAll();
         Pasajero getId(int id);
         void deleteId(int id);
+        List<PasajeroByEmailDto> GetPasajeroByEmail(string email);
     }
     public class PasajeroServices : IPasajeroServices
     {
@@ -51,6 +52,11 @@ namespace Turismo.Template.Application.Services
         public Pasajero getId(int id)
         {
             return _repository.FindBy<Pasajero>(id);
+        }
+
+        public List<PasajeroByEmailDto> GetPasajeroByEmail(string email)
+        {
+            return _query.GetPasajeroByEmail(email);
         }
     }
 }
