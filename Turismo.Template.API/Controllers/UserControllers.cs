@@ -37,15 +37,30 @@ namespace Turismo.Template.API.Controllers
         // POST: Cargar usuario
         // nombre, apelido, email, password
         [HttpPost]
-        public User Post(UserDto user)
+        public IActionResult Post(UserDto user)
         {
-            return _service.CreateUser(user);
+            try
+            {
+                return new JsonResult(_service.CreateUser(user)) { StatusCode = 200 };
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
         }
 
         [HttpGet("{id}")]
-        public User GetId(int id)
+        public IActionResult GetId(int id)
         {
-            return _service.getUserId(id);
+
+            try
+            {
+                return new JsonResult(_service.getUserId(id)) { StatusCode = 200 };
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
         }
 
         [HttpDelete("{id}")]
