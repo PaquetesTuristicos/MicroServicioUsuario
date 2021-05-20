@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Turismo.Template.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7a9632e16f00251219c20dfdcf436bcd56f907ba")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b2dc71454dd6f3f33a0db82f5c4acae569e0cdbc")]
 [assembly: System.Reflection.AssemblyProductAttribute("Turismo.Template.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Turismo.Template.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

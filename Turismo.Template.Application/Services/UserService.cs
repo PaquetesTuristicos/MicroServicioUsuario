@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Turismo.Template.Application.Helpers;
 using Turismo.Template.Domain.Commands;
 using Turismo.Template.Domain.DTO;
 using Turismo.Template.Domain.Entities;
@@ -34,7 +35,7 @@ namespace Turismo.Template.Application.Services
                 Nombre = user.Nombre,
                 Apellido = user.Apellido,
                 Email = user.Email,
-                Password = user.Password,
+                Password = Encrypt.GetSHA256(user.Password),
                 RollId = user.Roll
             };
             _repository.Add<User>(entity);
