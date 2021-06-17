@@ -11,7 +11,7 @@ namespace Turismo.Template.Domain.DTO
         public int Telefono { get; set; }
         public DateTime FechaNacimiento { get; set; }
         public int UserId { get; set; }
-        public List<UserByEmailDto> User { get; set; }
+        public List<UserDtoSinPassword> User { get; set; }
         public RollByEmailDto Roll { get; set; }
     }
 }

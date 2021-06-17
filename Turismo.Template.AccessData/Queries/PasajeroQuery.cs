@@ -30,6 +30,19 @@ namespace Turismo.Template.AccessData.Queries
                 .Join("Pasajeros", "Pasajeros.UserID", "Users.UserID")
                 .When(!string.IsNullOrWhiteSpace(email), q => q.WhereLike("Users.Email", $"%{email}%"));
             var usersresult = users.Get<UserByEmailDto>();
+            List<UserDtoSinPassword> usersDto = new List<UserDtoSinPassword>();
+            foreach (var u in usersresult)
+            {
+                var user = new UserDtoSinPassword
+                {
+                    Nombre = u.Nombre,
+                    Apellido = u.Apellido,
+                    Email = u.Email,
+                    Roll = u.RollId
+
+                };
+                usersDto.Add(user);
+            }
 
             List<PasajeroByEmailDto> result = new List<PasajeroByEmailDto>();
             foreach (var c in usersresult)
@@ -50,7 +63,7 @@ namespace Turismo.Template.AccessData.Queries
                               Telefono = pasajero.Telefono,
                               FechaNacimiento = pasajero.FechaNacimiento,
                               UserId = pasajero.UserId,
-                              User = usersresult.ToList(),
+                              User = usersDto.ToList(),
                               Roll = roles
                           });
             }

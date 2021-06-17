@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,9 +22,16 @@ namespace Turismo.Template.API.Controllers
 
         // GET: Roles
         [HttpGet]
-        public IEnumerable<Roll> Get()
+        public IActionResult Get()
         {
-            return _service.getAll();
+            try
+            {
+                return new JsonResult(_service.getAll()) { StatusCode = 200 };
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
 
         }
 

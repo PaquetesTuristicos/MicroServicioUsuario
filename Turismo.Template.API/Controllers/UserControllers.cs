@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -64,9 +65,27 @@ namespace Turismo.Template.API.Controllers
         }
 
         [HttpDelete("{id}")]
-        public void DeleteId(int id)
+        public IActionResult DeleteId(int id)
         {
-            _service.deleteUserId(id);
+            try
+            {
+                var user = _service.getUserId(id);
+                if (user != null)
+                {
+                    _service.deleteUserId(id);
+                    return new JsonResult(user) { StatusCode = 200 };
+                }
+                else
+                {
+                    return new JsonResult(user) { StatusCode = 404 };
+                }
+
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+
+            }
         }
 
     }

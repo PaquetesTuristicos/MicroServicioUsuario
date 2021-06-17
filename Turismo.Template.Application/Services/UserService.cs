@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net;
 using System.Text;
+using System.Web.Http;
 using Turismo.Template.Application.Helpers;
 using Turismo.Template.Domain.Commands;
 using Turismo.Template.Domain.DTO;
@@ -14,7 +16,7 @@ namespace Turismo.Template.Application.Services
     {
         User CreateUser(UserDto user);
         IEnumerable<User> getUser();
-        User getUserId(int id);
+        UserByIdDto getUserId(int id);
         void deleteUserId(int id);
         List<UserByEmailDto> GetUserByEmail(string email);
     }
@@ -46,14 +48,36 @@ namespace Turismo.Template.Application.Services
             return _repository.Traer<User>();
         }
 
-        public User getUserId(int id)
+        public UserByIdDto getUserId(int id)
         {
-            return _repository.FindBy<User>(id);
+            var user= _repository.FindBy<User>(id);
+            if (user == null)
+            {
+                throw new HttpResponseException(HttpStatusCode.NotFound);
+            }
+            return new UserByIdDto
+            {
+                UserId = user.UserId,
+                Nombre = user.Nombre,
+                Apellido = user.Apellido,
+                Email = user.Email,
+                RollId = user.RollId
+
+            };
         }
 
         public void deleteUserId(int id)
         {
-            _repository.DeleteBy<User>(id);
+            var user = _repository.FindBy<User>(id);
+            if (user == null)
+            {
+                throw new HttpResponseException(HttpStatusCode.NotFound);
+            }
+            else
+            {
+                _repository.DeleteBy<User>(id);
+            }
+            
         }
 
         public List<UserByEmailDto> GetUserByEmail(string email)

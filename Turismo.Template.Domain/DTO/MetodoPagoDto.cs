@@ -9,6 +9,11 @@ namespace Turismo.Template.Domain.DTO
     {
         public string Nombre { get; set; }
 
-        public virtual ICollection<Pasajero> Pasajeros { get; set; }
+    }
+    public class MetodoPagoDtoById
+    {
+        public int MetodoPagoId { get; set; }
+        public string Nombre { get; set; }
+
     }
 }

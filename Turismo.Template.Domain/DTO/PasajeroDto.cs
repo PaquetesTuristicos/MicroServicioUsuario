@@ -11,4 +11,13 @@ namespace Turismo.Template.Domain.DTO
         public int Telefono { get; set; }
         public DateTime FechaNacimiento { get; set; }
     }
+    public class PasajeroDtoById
+    {
+        public int PasajeroId { get; set; }
+        public int Dni { get; set; }
+        public int Telefono { get; set; }
+        public DateTime FechaNacimiento { get; set; }
+
+        public int UserId { get; set; }
+    }
 }

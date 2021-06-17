@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net;
 using System.Text;
+using System.Web.Http;
 using Turismo.Template.Domain.Commands;
 using Turismo.Template.Domain.DTO;
 using Turismo.Template.Domain.Entities;
@@ -12,7 +14,7 @@ namespace Turismo.Template.Application.Services
     {
         Pasajero Create(PasajeroDto pasajero);
         IEnumerable<Pasajero> getAll();
-        Pasajero getId(int id);
+        PasajeroDtoById getId(int id);
         void deleteId(int id);
         List<PasajeroByEmailDto> GetPasajeroByEmail(string email);
     }
@@ -49,9 +51,22 @@ namespace Turismo.Template.Application.Services
             return _repository.Traer<Pasajero>();
         }
 
-        public Pasajero getId(int id)
+        public PasajeroDtoById getId(int id)
         {
-            return _repository.FindBy<Pasajero>(id);
+            var pasajero = _repository.FindBy<Pasajero>(id);
+            if (pasajero == null)
+            {
+                throw new HttpResponseException(HttpStatusCode.NotFound);
+            }
+            return new PasajeroDtoById
+            {
+                PasajeroId = pasajero.PasajeroId,
+                Dni = pasajero.Dni,
+                Telefono = pasajero.Telefono,
+                FechaNacimiento = pasajero.FechaNacimiento,
+
+                UserId = pasajero.UserId
+            };
         }
 
         public List<PasajeroByEmailDto> GetPasajeroByEmail(string email)

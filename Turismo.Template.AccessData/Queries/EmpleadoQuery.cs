@@ -30,6 +30,19 @@ namespace Turismo.Template.AccessData.Queries
                 .Join("Empleados", "Empleados.UserID", "Users.UserID")
                 .When(!string.IsNullOrWhiteSpace(email), q => q.WhereLike("Users.Email", $"%{email}%"));
             var usersresult = users.Get<UserByEmailDto>();
+            List<UserDtoSinPassword> usersDto = new List<UserDtoSinPassword>();
+            foreach(var u in usersresult)
+            {
+                var user = new UserDtoSinPassword
+                {
+                    Nombre = u.Nombre,
+                    Apellido = u.Apellido,
+                    Email = u.Email,
+                    Roll = u.RollId
+
+                };
+                usersDto.Add(user);
+            }
 
             List<EmpleadoByEmailDto> result = new List<EmpleadoByEmailDto>();
             foreach (var c in usersresult)
@@ -52,7 +65,7 @@ namespace Turismo.Template.AccessData.Queries
                           Legajo = empleado.Legajo,
                           Sueldo = empleado.Sueldo,
                           UserId = empleado.UserId,
-                          User = usersresult.ToList(),
+                          User = usersDto.ToList(),
                           Roll = roles
                       }); ;
             }

@@ -24,6 +24,7 @@ using Turismo.Template.Application.Services;
 using Turismo.Template.Domain.Commands;
 using Turismo.Template.Domain.Queries;
 
+
 namespace Turismo.Template.API
 {
     public class Startup
@@ -64,6 +65,9 @@ namespace Turismo.Template.API
             {
                 return new SqlConnection(conexion);
             });
+
+            services.AddCors(c => c.AddDefaultPolicy(x => x.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod()));
+
         }
 
         private void AddSwagger(IServiceCollection services)
@@ -117,6 +121,9 @@ namespace Turismo.Template.API
             {
                 c.SwaggerEndpoint("/swagger/test/swagger.json", "Prototype API V1");
             });
+
+            //CORS
+            app.UseCors();
         }
 
     }

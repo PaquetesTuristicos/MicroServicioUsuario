@@ -12,7 +12,7 @@ namespace Turismo.Template.Domain.DTO
         public int Legajo { get; set; }
         public double Sueldo { get; set; }
         public int UserId { get; set; }
-        public List<UserByEmailDto> User { get; set; }
+        public List<UserDtoSinPassword> User { get; set; }
         public RollByEmailDto Roll { get; set; }
     }
 }

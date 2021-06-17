@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,7 +23,7 @@ namespace Turismo.Template.API.Controllers
 
         // GET: Empleados
         [HttpGet]
-        public IEnumerable<MetodoPago> Get()
+        public IEnumerable<MetodoPagoDtoById> Get()
         {
             return _service.getAll();
 
@@ -55,9 +56,27 @@ namespace Turismo.Template.API.Controllers
         }
 
         [HttpDelete("{id}")]
-        public void DeleteId(int id)
+        public IActionResult DeleteId(int id)
         {
-            _service.deleteId(id);
+            try
+            {
+                var mp = _service.getId(id);
+                if (mp != null)
+                {
+                    _service.deleteId(id);
+                    return new JsonResult(mp) { StatusCode = 200 };
+                }
+                else
+                {
+                    return new JsonResult(mp) { StatusCode = 404 };
+                }
+
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+
+            }
         }
     }
 }
