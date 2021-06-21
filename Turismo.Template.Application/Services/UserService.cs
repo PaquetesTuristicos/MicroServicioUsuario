@@ -19,6 +19,8 @@ namespace Turismo.Template.Application.Services
         UserByIdDto getUserId(int id);
         void deleteUserId(int id);
         List<UserByEmailDto> GetUserByEmail(string email);
+        UserDto Update(int id, UserDto user);
+        User Authenticate(string username, string password);
     }
     public class UserService : IUserService
     {
@@ -84,6 +86,47 @@ namespace Turismo.Template.Application.Services
         {
             return _query.GetUserByEmail(email);
         }
+
+        public UserDto Update(int id, UserDto user)
+        {
+            var entity = new User
+            {
+                Nombre = user.Nombre,
+                Apellido = user.Apellido,
+                Email = user.Email,
+                Password = Encrypt.GetSHA256(user.Password),
+                RollId = user.Roll
+            };
+            _repository.Add<User>(entity);
+            return new UserDto
+            {
+                Nombre = user.Nombre,
+                Apellido = user.Apellido,
+                Email = user.Email,
+                Password = "*****",
+                Roll = user.Roll
+            };
+        }
+
+        public User Authenticate(string username, string password)
+        {
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
+                return null;
+
+            var user = _query.GetUserLoginByEmail(username);
+
+            // check if username exists
+            if (user == null)
+                return null;
+
+            // check if password is correct
+            if (password != user.Password)
+                return null;
+
+            // authentication successful
+            return user;
+        }
+
     }
 
 }

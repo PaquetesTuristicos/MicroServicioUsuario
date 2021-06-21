@@ -201,6 +201,10 @@
             "Swashbuckle.AspNetCore.Swagger": {
               "target": "Package",
               "version": "[6.1.4, )"
+            },
+            "TourmalineCore.AspNetCore.JwtAuthentication.Core": {
+              "target": "Package",
+              "version": "[0.1.1, )"
             }
           },
           "imports": [

@@ -6,6 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using Turismo.Template.Domain.DTO;
+using Turismo.Template.Domain.Entities;
 using Turismo.Template.Domain.Queries;
 
 namespace Turismo.Template.AccessData.Queries
@@ -54,6 +55,21 @@ namespace Turismo.Template.AccessData.Queries
                        });
             }
             return result.ToList();
+        }
+
+        public User GetUserLoginByEmail(string email)
+        {
+            var db = new QueryFactory(_connection, _SqlKataCompiler);
+            var user = db.Query("Users").Select("UserId","Nombre","Apellido","Email","Password","RollId").Where("Email", "=", email).FirstOrDefault<User>();
+            return new User
+            {
+                UserId =user.UserId,
+                Nombre=user.Nombre,
+                Apellido=user.Apellido,
+                Email = user.Email,
+                Password = user.Password,
+                RollId = user.RollId
+            };
         }
     }
 }

@@ -733,3 +733,5 @@ C:\Users\pc\source\repos\MicroServicioUsuario\Turismo.Template.API\bin\Debug\net
 C:\Users\pc\source\repos\MicroServicioUsuario\Turismo.Template.API\bin\Debug\netcoreapp3.1\System.Net.Http.Formatting.dll
 C:\Users\pc\source\repos\MicroServicioUsuario\Turismo.Template.API\bin\Debug\netcoreapp3.1\System.Web.Http.dll
 C:\Users\pc\source\repos\MicroServicioUsuario\Turismo.Template.API\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+C:\Users\pc\source\repos\MicroServicioUsuario\Turismo.Template.API\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\pc\source\repos\MicroServicioUsuario\Turismo.Template.API\bin\Debug\netcoreapp3.1\TourmalineCore.AspNetCore.JwtAuthentication.Core.dll
