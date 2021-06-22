@@ -16,6 +16,8 @@ using Turismo.Template.Domain.Entities;
 
 namespace Turismo.Template.API.Controllers
 {
+    [EnableCors]
+
     [Authorize]
     [Route("api/User")]
     [ApiController]
@@ -28,6 +30,8 @@ namespace Turismo.Template.API.Controllers
         }
 
         // GET: Usuarios
+        [AllowAnonymous]
+
         [HttpGet]
         [ProducesResponseType(typeof(List<UserByEmailDto>), StatusCodes.Status200OK)]
         public IActionResult Get([FromQuery] string email)

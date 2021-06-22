@@ -61,15 +61,22 @@ namespace Turismo.Template.AccessData.Queries
         {
             var db = new QueryFactory(_connection, _SqlKataCompiler);
             var user = db.Query("Users").Select("UserId","Nombre","Apellido","Email","Password","RollId").Where("Email", "=", email).FirstOrDefault<User>();
-            return new User
+            if(user != null)
             {
-                UserId =user.UserId,
-                Nombre=user.Nombre,
-                Apellido=user.Apellido,
-                Email = user.Email,
-                Password = user.Password,
-                RollId = user.RollId
-            };
+                return new User
+                {
+                    UserId = user.UserId,
+                    Nombre = user.Nombre,
+                    Apellido = user.Apellido,
+                    Email = user.Email,
+                    Password = user.Password,
+                    RollId = user.RollId
+                };
+            }
+            else
+            {
+                return new User();
+            }
         }
     }
 }

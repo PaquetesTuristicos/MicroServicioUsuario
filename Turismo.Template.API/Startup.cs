@@ -146,6 +146,8 @@ namespace Turismo.Template.API
             app.UseHttpsRedirection();
 
             app.UseRouting();
+            //CORS
+            app.UseCors();
 
             app.UseAuthorization();
 
@@ -160,8 +162,7 @@ namespace Turismo.Template.API
                 c.SwaggerEndpoint("/swagger/test/swagger.json", "Prototype API V1");
             });
 
-            //CORS
-            app.UseCors();
+
         }
 
     }
