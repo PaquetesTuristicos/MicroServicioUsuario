@@ -30,8 +30,6 @@ namespace Turismo.Template.API.Controllers
         }
 
         // GET: Usuarios
-        [AllowAnonymous]
-
         [HttpGet]
         [ProducesResponseType(typeof(List<UserByEmailDto>), StatusCodes.Status200OK)]
         public IActionResult Get([FromQuery] string email)
@@ -146,7 +144,7 @@ namespace Turismo.Template.API.Controllers
             {
                 Subject = new ClaimsIdentity(new Claim[]
                 {
-                    new Claim(ClaimTypes.Email, user.UserId.ToString())
+                            new Claim(ClaimTypes.Name, user.UserId.ToString())
                 }),
                 Expires = DateTime.UtcNow.AddDays(7),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)

@@ -39,7 +39,7 @@ namespace Turismo.Template.Application.Services
                 Nombre = user.Nombre,
                 Apellido = user.Apellido,
                 Email = user.Email,
-                Password = Encrypt.GetSHA256(user.Password),
+                Password = user.Password,
                 RollId = user.Roll
             };
             _repository.Add<User>(entity);

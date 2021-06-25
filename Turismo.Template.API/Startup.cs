@@ -105,6 +105,8 @@ namespace Turismo.Template.API
                     ValidateAudience = false
                 };
             });
+            // configure DI for application services
+            services.AddScoped<IUserService, UserService>();
 
         }
 
@@ -148,6 +150,7 @@ namespace Turismo.Template.API
             app.UseRouting();
             //CORS
             app.UseCors();
+            app.UseAuthentication();
 
             app.UseAuthorization();
 
