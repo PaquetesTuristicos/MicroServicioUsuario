@@ -96,7 +96,7 @@ namespace Turismo.Template.API.Controllers
             }
         }
         [HttpPut("{id}")]
-        public IActionResult PutMercaderia(int id, UserDto user)
+        public IActionResult Update(int id, UserDto user)
         {
             try
             {

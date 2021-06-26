@@ -71,7 +71,7 @@ namespace Turismo.Template.API
 
             services.AddCors(c => c.AddDefaultPolicy(x => x.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod()));
 
-            // configure jwt authentication
+            // Validacion JWT
             var key = Encoding.ASCII.GetBytes("xecretKeywqejane");
             services.AddAuthentication(x =>
             {
