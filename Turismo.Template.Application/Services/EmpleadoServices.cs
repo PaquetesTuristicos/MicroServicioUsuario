@@ -17,6 +17,7 @@ namespace Turismo.Template.Application.Services
         EmpleadoDtoById getId(int id);
         void deleteId(int id);
         List<EmpleadoByEmailDto> GetEmpleadoByEmail(string email);
+        EmpleadoDto Update(int id, EmpleadoDto empleado);
     }
     public class EmpleadoServices : IEmpleadoServices
     {
@@ -75,6 +76,29 @@ namespace Turismo.Template.Application.Services
         public List<EmpleadoByEmailDto> GetEmpleadoByEmail(string email)
         {
             return _query.GetEmpleadoByEmail(email);
+        }
+        public EmpleadoDto Update(int id, EmpleadoDto empleado)
+        {
+            var entity = new Empleado
+            {
+                EmpleadoId = id,
+                Dni = empleado.Dni,
+                Telefono = empleado.Telefono,
+                FechaNacimiento = empleado.FechaNacimiento,
+                Legajo = empleado.Legajo,
+                Sueldo = empleado.Sueldo,
+                UserId = empleado.UserId
+            };
+            _repository.Update<Empleado>(entity);
+            return new EmpleadoDto
+            {
+                Dni = empleado.Dni,
+                Telefono = empleado.Telefono,
+                FechaNacimiento = empleado.FechaNacimiento,
+                Legajo = empleado.Legajo,
+                Sueldo = empleado.Sueldo,
+                UserId = empleado.UserId
+            };
         }
     }
 }

@@ -87,5 +87,19 @@ namespace Turismo.Template.API.Controllers
 
             }
         }
+        [HttpPut("{id}")]
+        public IActionResult Update(int id, PasajeroDto pasajero)
+        {
+            try
+            {
+                return new JsonResult(_service.Update(id, pasajero)) { StatusCode = 200 };
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+
+            }
+
+        }
     }
 }

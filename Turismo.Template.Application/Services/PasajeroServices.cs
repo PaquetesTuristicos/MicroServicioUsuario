@@ -17,6 +17,7 @@ namespace Turismo.Template.Application.Services
         PasajeroDtoById getId(int id);
         void deleteId(int id);
         List<PasajeroByEmailDto> GetPasajeroByEmail(string email);
+        PasajeroDto Update(int id, PasajeroDto pasajero);
     }
     public class PasajeroServices : IPasajeroServices
     {
@@ -72,6 +73,25 @@ namespace Turismo.Template.Application.Services
         public List<PasajeroByEmailDto> GetPasajeroByEmail(string email)
         {
             return _query.GetPasajeroByEmail(email);
+        }
+        public PasajeroDto Update(int id, PasajeroDto pasajero)
+        {
+            var entity = new Pasajero
+            {
+                PasajeroId = id,
+                Dni = pasajero.Dni,
+                Telefono = pasajero.Telefono,
+                FechaNacimiento = pasajero.FechaNacimiento,
+                UserId = pasajero.UserId
+            };
+            _repository.Update<Pasajero>(entity);
+            return new PasajeroDto
+            {
+                Dni = pasajero.Dni,
+                Telefono = pasajero.Telefono,
+                FechaNacimiento = pasajero.FechaNacimiento,
+                UserId = pasajero.UserId
+            };
         }
     }
 }
