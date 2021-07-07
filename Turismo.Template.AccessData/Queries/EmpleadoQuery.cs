@@ -53,12 +53,13 @@ namespace Turismo.Template.AccessData.Queries
                 .FirstOrDefault<RollByEmailDto>();
 
             var empleado = db.Query("Empleados")
-                .Select("Empleados.Dni", "Empleados.Telefono", "Empleados.FechaNacimiento", "Empleados.Legajo", "Empleados.Sueldo", "Empleados.UserID")
+                .Select("Empleados.EmpleadoId","Empleados.Dni", "Empleados.Telefono", "Empleados.FechaNacimiento", "Empleados.Legajo", "Empleados.Sueldo", "Empleados.UserID")
                 .Where("UserId", "=", c.UserId)
                 .FirstOrDefault<EmpleadoByEmailDto>();
             result.Add(
                       new EmpleadoByEmailDto
                       {
+                          EmpleadoId = empleado.EmpleadoId,
                           Dni = empleado.Dni,
                           Telefono = empleado.Telefono,
                           FechaNacimiento = empleado.FechaNacimiento,

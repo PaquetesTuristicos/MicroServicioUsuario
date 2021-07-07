@@ -6,6 +6,7 @@ namespace Turismo.Template.Domain.DTO
 {
     public class EmpleadoByEmailDto
     {
+        public int EmpleadoId { get; set; }
         public int Dni { get; set; }
         public int Telefono { get; set; }
         public DateTime FechaNacimiento { get; set; }
