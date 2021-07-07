@@ -115,13 +115,13 @@ namespace Turismo.Template.API
             services.AddSwaggerGen(options =>
             {
 
-                var groupName = "test";
+                var groupName = "v1";
 
                 options.SwaggerDoc(groupName, new OpenApiInfo
                 {
-                    Title = $"Prototype {groupName}",
+                    Title = $"Microservicio Usuario {groupName}",
                     Version = groupName,
-                    Description = "Prototype API",
+                    Description = "Microservicio Usuario API",
                     Contact = new OpenApiContact
                     {
                         Name = "Projecto Software",
@@ -162,7 +162,7 @@ namespace Turismo.Template.API
             //indica la ruta para generar la configuración de swagger
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/test/swagger.json", "Prototype API V1");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Prototype API V1");
             });
 
 
