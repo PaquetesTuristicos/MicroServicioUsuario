@@ -27,7 +27,7 @@ namespace Turismo.Template.AccessData.Queries
 
             var users = db.Query("Users")
                 .Select()
-                .Join("Pasajeros", "Pasajeros.UserID", "Users.UserID")
+                .Join("Pasajeros", "Pasajeros.UserId", "Users.UserId")
                 .When(!string.IsNullOrWhiteSpace(email), q => q.WhereLike("Users.Email", $"%{email}%"));
             var usersresult = users.Get<UserByEmailDto>();
             List<UserDtoSinPassword> usersDto = new List<UserDtoSinPassword>();
@@ -53,17 +53,22 @@ namespace Turismo.Template.AccessData.Queries
                 .FirstOrDefault<RollByEmailDto>();
 
                 var pasajero = db.Query("Pasajeros")
-                    .Select("Pasajeros.Dni", "Pasajeros.Telefono", "Pasajeros.FechaNacimiento", "Pasajeros.UserID")
+                    .Select("Pasajeros.PasajeroId","Pasajeros.Dni", "Pasajeros.Telefono", "Pasajeros.FechaNacimiento", "Pasajeros.UserId")
                     .Where("UserId", "=", c.UserId)
-                    .FirstOrDefault<EmpleadoByEmailDto>();
+                    .FirstOrDefault<PasajeroByEmailDto>();
+                var usertext = db.Query("Users")
+                    .Select()
+                    .Where("UserId", "=", c.UserId)
+                    .FirstOrDefault<UserDtoSinPasswordSinRoll>();
                 result.Add(
                           new PasajeroByEmailDto
                           {
+                              pasajeroId = pasajero.pasajeroId,
                               Dni = pasajero.Dni,
                               Telefono = pasajero.Telefono,
                               FechaNacimiento = pasajero.FechaNacimiento,
                               UserId = pasajero.UserId,
-                              User = usersDto.ToList(),
+                              User = usertext,
                               Roll = roles
                           });
             }
