@@ -119,8 +119,13 @@ namespace Turismo.Template.API.Controllers
             {
                 model.Roll = 3;
                 // create user
-                _service.CreateUser(model);
-                return Ok();
+                var user =_service.CreateUser(model);
+                return Ok(new {
+                    Id = user.UserId,
+                    Username = user.Email,
+                    Nombre = user.Nombre,
+                    Apellido = user.Apellido,
+                });
             }
             catch (Exception ex)
             {
